@@ -2,86 +2,82 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kurulum Rehberi - LeetEasy</title>
+    <title>Kurulum Rehberi</title>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <div class="container narrow">
         
-        <div class="header">
-            <h2>NASIL KURULUR?</h2>
-            <p>LeetEasy'i tarayıcına eklemek çok basit!</p>
+        <div style="text-align:center; margin-bottom:20px; border-bottom:1px solid #999; padding-bottom:10px;">
+            <h2 style="color:#2c3e50; margin:0;">HIZLI KURULUM</h2>
+            <p style="color:#666; font-size:13px; margin:5px 0 0 0;">Hatayı önlemek için adımları dikkatlice oku.</p>
         </div>
 
-        <div class="steps">
-            <div class="step">
-                <span class="step-num">1</span>
-                <div class="step-content">
-                    <h3>İndir ve Çıkar</h3>
-                    <p>İndirdiğin <b>LeetEasy.zip</b> dosyasını masaüstüne bir klasör olarak çıkar.</p>
-                </div>
-            </div>
-
-            <div class="step">
-                <span class="step-num">2</span>
-                <div class="step-content">
-                    <h3>Uzantılar Sayfasını Aç</h3>
-                    <p>Aşağıdaki koda tıkla ve kopyala, sonra tarayıcı adres çubuğuna yapıştırıp Enter'a bas:</p>
-                    
-                    <div class="copy-box" onclick="copyText()">
-                        <code id="extensionUrl">chrome://extensions</code>
-                        <span class="copy-icon"><i class="far fa-copy"></i> Tıkla Kopyala</span>
-                    </div>
-                    <div id="copyAlert" style="display:none; color:green; font-size:12px; font-weight:bold; margin-top:5px;">Kopyalandı! ✅</div>
-
-                </div>
-            </div>
-
-            <div class="step">
-                <span class="step-num">3</span>
-                <div class="step-content">
-                    <h3>Geliştirici Modunu Aç</h3>
-                    <p>Sayfanın sağ üst köşesindeki <b>"Geliştirici Modu"</b> anahtarını aç.</p>
-                </div>
-            </div>
-
-            <div class="step">
-                <span class="step-num">4</span>
-                <div class="step-content">
-                    <h3>Paketlenmemiş Öğe Yükle</h3>
-                    <p>Sol üstteki <b>"Paketlenmemiş öğe yükle"</b> butonuna bas ve masaüstüne çıkardığın LeetEasy klasörünü seç.</p>
+        <div class="pixel-step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+                <h3>Dosyayı Klasöre Çıkart</h3>
+                <p>İndirdiğin <b>LeetEasy.zip</b> dosyasını aç ve içindeki klasörü Masaüstüne sürükle.</p>
+                <div class="warning-red">
+                    ⚠️ DİKKAT: Bu klasörü kurulumdan sonra ASLA SİLME! Silersen eklenti bozulur.
                 </div>
             </div>
         </div>
 
-        <div class="success-box">
-            <i class="fas fa-check-circle success-icon"></i>
-            <div>
-                <strong>Tebrikler!</strong>
-                <p style="margin:0">Oyuna girip <b>ALT + Q</b> yaparak menüyü açabilirsin.</p>
+        <div class="pixel-step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+                <h3>Uzantılar Sayfası</h3>
+                <p>Aşağıdaki kodu kopyala ve tarayıcının adres çubuğuna yapıştırıp Enter'a bas:</p>
+                <div class="copy-input" onclick="copyText()">
+                    <span id="extUrl">chrome://extensions</span>
+                    <span id="copyMsg" style="color:#fff;">[ KOPYALA ]</span>
+                </div>
             </div>
         </div>
 
-        <div class="download-section">
-            <a href="index.html" class="back-btn">
-                <i class="fas fa-arrow-left"></i> Ana Sayfaya Dön
-            </a>
+        <div class="pixel-step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+                <h3>Geliştirici Modu</h3>
+                <p>Açılan sayfanın sağ üst köşesindeki <b>"Geliştirici Modu"</b> anahtarını aç.</p>
+            </div>
+        </div>
+
+        <div class="pixel-step">
+            <div class="step-num">4</div>
+            <div class="step-content">
+                <h3>Paketi Yükle</h3>
+                <p>Sol üstteki <b>"Paketlenmemiş öğe yükle"</b> butonuna bas ve masaüstüne attığın klasörü seç.</p>
+            </div>
+        </div>
+
+        <div class="pixel-step">
+            <div class="step-num">5</div>
+            <div class="step-content">
+                <h3>Menüyü Aç</h3>
+                <p>Oyuna gir (LeetHotel) ve klavyeden <b>ALT + Q</b> tuşlarına aynı anda basarak paneli aç.</p>
+            </div>
+        </div>
+
+        <div style="text-align:center;">
+            <a href="index.html" class="back-btn">Geri Dön</a>
         </div>
 
     </div>
 
     <script>
         function copyText() {
-            const text = document.getElementById("extensionUrl").innerText;
-            navigator.clipboard.writeText(text).then(() => {
-                const alertBox = document.getElementById("copyAlert");
-                alertBox.style.display = "block";
-                setTimeout(() => { alertBox.style.display = "none"; }, 2000);
-            });
+            const text = document.getElementById("extUrl").innerText;
+            navigator.clipboard.writeText(text);
+            const msg = document.getElementById("copyMsg");
+            msg.innerText = "OK!";
+            msg.style.color = "#00ff00";
+            setTimeout(() => { msg.innerText = "[ KOPYALA ]"; msg.style.color="#fff"; }, 2000);
         }
     </script>
 

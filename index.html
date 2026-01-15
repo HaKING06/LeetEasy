@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LeetEasy - LeetHotel Pro Tools</title>
+    <title>LeetEasy - Profesyonel Araçlar</title>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -13,41 +14,60 @@
     <div class="container">
         
         <div class="header bounce-in">
-            <h1>LEET<span class="highlight">EASY</span> v7</h1>
-            <p>LeetHotel İçin Geliştirilmiş En Kapsamlı Hile ve Araç Seti</p>
+            <img src="icon.png" alt="Logo" class="header-icon">
+            <div class="header-text">
+                <h1>LEET<span class="highlight">EASY</span> v8</h1>
+                <p>LeetHotel İçin Geliştirilmiş En Kapsamlı Araç Seti</p>
+            </div>
         </div>
 
         <div class="features-grid">
             <div class="feature-card">
-                <i class="fas fa-mouse-pointer icon"></i>
-                <h3>Oto Tıklayıcı</h3>
-                <p>Ayarlanabilir hız ve tuş atamasıyla otomatik tıklama makrosu.</p>
+                <i class="fas fa-ban icon"></i>
+                <h3>Reklam Engelleyici</h3>
+                <p>Oda reklamlarını ve spam botları otomatik gizler.</p>
             </div>
             <div class="feature-card">
                 <i class="fas fa-user-secret icon"></i>
                 <h3>Gölge Taklitçi</h3>
-                <p>Seçtiğin kişinin yazdıklarını nano saniyede taklit et.</p>
+                <p>Seçtiğin kişinin sohbetini anlık kopyalar.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-bolt icon"></i>
+                <h3>Kaos Modu</h3>
+                <p>Karakterin sürekli efekt ve eşya değiştirir.</p>
             </div>
             <div class="feature-card">
                 <i class="fas fa-book icon"></i>
                 <h3>Komut Kütüphanesi</h3>
-                <p>Yüzlerce efekt, içecek ve gizli komut tek tıkla elinin altında.</p>
+                <p>Yüzlerce gizli komut ve eşya kodu elinin altında.</p>
             </div>
             <div class="feature-card">
-                <i class="fas fa-window-maximize icon"></i>
+                <i class="fas fa-mouse-pointer icon"></i>
+                <h3>Oto Tıklayıcı</h3>
+                <p>AFK kalmadan aktif görün, oyundan düşme.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-desktop icon"></i>
                 <h3>Oyun İçi Panel</h3>
-                <p>Alt+Q kısayolu ile oyun içinden yönetilebilir arayüz.</p>
+                <p><b>ALT + Q</b> yaparak menüyü aç/kapat.</p>
             </div>
         </div>
 
         <div class="download-section">
-            <a href="LeetEasy.zip" download class="download-btn" onclick="startDownload()">
-                <i class="fas fa-download"></i> HEMEN İNDİR (v7.0)
+            <a href="LeetEasy.zip" download class="download-btn" onclick="redirectHelp()">
+                <i class="fas fa-download"></i> HEMEN İNDİR
             </a>
+            
             <div class="info-links">
-                <a href="help.html" class="help-link"><i class="fas fa-question-circle"></i> Nasıl Kurulur?</a>
+                <a href="help.html" class="v7-link">Nasıl Kurulur?</a>
+                <span class="divider">|</span>
+                <a href="safety.html" class="v7-link green">Güvenlik Raporu</a>
             </div>
-            <p class="virus-check">✅ %100 Güvenli ve Açık Kaynak</p>
+            
+            <p style="font-size:11px; color:#27ae60; margin-top:10px; font-weight:bold;">
+                ✅ %100 Güvenli • Açık Kaynak Kodlu
+            </p>
         </div>
 
         <footer>
@@ -57,11 +77,8 @@
     </div>
 
     <script>
-        function startDownload() {
-            // Yarım saniye (500ms) sonra yardım sayfasına git
-            setTimeout(() => {
-                window.location.href = "help.html";
-            }, 500);
+        function redirectHelp() {
+            setTimeout(() => { window.location.href = "help.html"; }, 500);
         }
     </script>
 
